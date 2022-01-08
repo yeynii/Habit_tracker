@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
-import Habit from "./habit";
-import Addform from "./form/addform";
+import Habit from "../habit/habit";
+import Addform from "../form/addform";
 
 class Habits extends PureComponent {
   handleIncrement = (habit) => {
@@ -35,7 +35,7 @@ class Habits extends PureComponent {
             />
           ))}
         </ul>
-        <button className="reset-button" onClick={this.handleReset}>
+        <button className="reset-button" title="reset" onClick={this.handleReset}>
           Reset All
         </button>
       </div>
