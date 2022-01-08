@@ -1,6 +1,7 @@
 export default class HabitPresenter {
-  constructor(habits) {
-      this.habits = habits
+  constructor(habits, maxHabits) {
+      this.habits = habits;
+      this.maxHabits = maxHabits;
   }
 
   getHabits(){
@@ -34,6 +35,9 @@ export default class HabitPresenter {
   }
 
   add(name, update) {
+    if(this.habits.length === this.maxHabits){
+      throw new Error(`습관의 갯수는 ${this.maxHabits}개를 넘을 수 없습니다`);
+    }
     this.habits = [...this.habits, { id: Date.now(), name, count: 0 }];
     update(this.habits);
   }
