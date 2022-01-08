@@ -10,6 +10,7 @@ exports[`Navbar renders 1`] = `
   </span>
   <span
     className="active-count"
+    data-testid="total-count"
   >
     4
   </span>

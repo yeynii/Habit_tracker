@@ -6,7 +6,7 @@ class Navbar extends PureComponent {
       <header>
         <i className="fas fa-leaf"></i>
         <span>Habit Tracker</span>
-        <span className="active-count">{this.props.totalCount}</span>
+        <span className="active-count" data-testid="total-count">{this.props.totalCount}</span>
       </header>
     );
   }
