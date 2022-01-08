@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import Habit from "./habit";
-import Addform from "./addform";
+import Addform from "./form/addform";
 
 class Habits extends PureComponent {
   handleIncrement = (habit) => {
